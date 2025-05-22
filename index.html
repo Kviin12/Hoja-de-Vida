@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+        }
+        .navbar {
+            background: #004085 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+        }
+        .carousel-container {
+            margin: 20px 0;
+            border-top: 1px solid #000000; /* Línea superior */
+            border-bottom: 1px solid #000000; /* Línea inferior */
+            
+        }
+        .profile-container {
+            text-align: center;
+            padding: 30px 0;
+        }
+        .profile-image {
+            width: 230px;
+            height: 280px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .content-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #004085;
+            color: white;
+            padding: 20px 0;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kevyn Villegas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./Experiencias.html">Habilidades</a></li><!--XP y Habilidades-->
+                    <li class="nav-item"><a class="nav-link" href="./Actividades y Logros Servitronic.html">Experiencia Laboral Servitronic</a></li><!--Servitronic-->
+                    <li class="nav-item"><a class="nav-link" href="./Actividades y Logros.html">Experiencia Laboral La Salle</a></li> <!--La Salle-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <p></p>
+    </div>
+
+    <div class="carousel-container">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/Codigo Calendario.jpg" class="d-block w-100" alt="Imagen 1">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="./img/Codigo cintilla.png" class="d-block w-100" alt="Imagen 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/programación de matríx.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/panel led.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/Calendario propio.jpg" class="d-block w-100" alt="Imagen 2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/Proncipal reservas.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/Reservas.jpg" class="d-block w-100" alt="Imagen 3">
+                </div>
+            
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container profile-container">
+        <h2>Imagen de Perfil</h2>
+        <img src="img/Imagen_Hoja_de_vida.jpeg" alt="Imagen de perfil" class="profile-image">
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 content-box">
+                <h2 class="text-center">Resumen de Actividades y Experiencias</h2>
+                <ul>
+                    <li>He formado parte del equipo del Laboratorio Fintrade, asumiendo roles estratégicos y operativos. He contribuido activamente en el desarrollo de soluciones técnicas, la gestión de proyectos y la implementación de iniciativas en múltiples áreas, fortaleciendo la articulación entre tecnología, análisis financiero y procesos académicos.</li>
+                    <br>
+                    <li>Cuento con experiencia en trabajos de remodelación e infraestructura, desempeñándome como técnico electricista en la estructuración de cableado eléctrico y de datos, instalación de cámaras de seguridad, coordinación de personal y logística de eventos como asambleas residenciales. He trabajado también en la reparación y mantenimiento de equipos de cómputo, y actualmente desarrollo 
+                        aplicativos y páginas web orientadas a optimizar procesos y facilitar la gestión de información financiera y administrativa.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+                <a href="https://google.com"><i class="bi bi-google"></i></a>
+                <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+                <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com"><i class="bi bi-github"></i></a>
+            </div>
+            <p>KEVIN &copy; Todos los derechos reservados 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

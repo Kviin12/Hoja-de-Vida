@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Logros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .video-container video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        li {
+            transition: background-color 0.3s;
+        }
+        li:hover {
+            background-color: lightblue;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+            cursor: zoom-in;
+        }
+        .modal-content img.zoomed {
+            transform: scale(1.5);
+            cursor: zoom-out;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Habilidades</h1>
+    </header>
+    <div class="container">
+        <h2>Habilidades Laborales</h2>
+        <ul>
+            <li>💻 <b>Desarrollo Web:</b> Dominio en tecnologías como <b>HTML</b>, <b>CSS</b> y <b>JavaScript</b> para la creación de páginas web funcionales y modernas.</li>
+            <p></p>
+            <li>🧠 <b>Lenguajes de Programación:</b> Conocimiento y aplicación de <b>Java</b>, <b>Visual Basic</b> y <b>C</b>, <b>CSS</b> en distintos entornos académicos y técnicos.</li>
+            <p></p>
+            <li>🔌 <b>Programación en Arduino:</b> Experiencia desarrollando soluciones interactivas con microcontroladores, integración con sensores, pantallas LED y automatización.</li>
+            <p></p>
+            <li>⚡ <b>Electricidad y Cableado:</b> Experiencia en la <b>remodelación de cableado eléctrico y de datos</b> en instalaciones técnicas y residenciales.</li>
+            <p></p>
+            <li>🎥 <b>Instalación de Sistemas de Seguridad:</b> Instalador de <b>cámaras de videovigilancia</b> con cableado estructurado y configuración técnica.</li>
+            <p></p>
+            <li>🛠️ <b>Soporte Técnico y Mantenimiento:</b> Diagnóstico, <b>arreglo de equipos de cómputo</b>, instalación de software y recuperación de sistemas operativos.</li>
+            <p></p>
+            <li>📊 <b>Automatización y Visualización de Datos:</b> Desarrollo de soluciones con <b>Power BI</b>, <b>Excel avanzado</b> y herramientas digitales para toma de decisiones.</li>
+            <p></p>
+            <li>🧩 <b>Gestión y Coordinación:</b> Coordinador en la logística y operación de <b>eventos institucionales</b> y <b>asambleas residenciales</b>, incluyendo manejo de personal técnico.</li>
+            <p></p>
+            <li>🖥️ <b>Proyectos con Raspberry Pi:</b> Configuración de Raspberry Pi, conexión con Arduino, pantallas LED y optimización de código para entornos de visualización continua.</li>
+            <p></p>
+            <li>🌐 <b>Innovación Digital:</b> Creación de <b>aplicativos web</b> para facilitar procesos institucionales y gestión financiera personalizada.</li>
+        </ul>
+
+        <h2>Habilidades Personales</h2>
+        <ul>
+            <li><p>🔧 <b>Resolución de Problemas:</b> Capacidad para identificar, analizar y solucionar desafíos técnicos y operativos.</p></li>
+            <li><p>📚 <b>Aprendizaje Autónomo:</b> Facilidad para adquirir y aplicar nuevos conocimientos y tecnologías de forma autodidacta.</p></li>
+            <li><p>💡 <b>Creatividad:</b> Desarrollo de soluciones innovadoras y propuestas funcionales frente a necesidades reales.</p></li>
+            <li><p>🤝 <b>Trabajo en Equipo:</b> Experiencia coordinando con otros profesionales en entornos colaborativos y multidisciplinarios.</p></li>
+            <li><p>🛠️ <b>Versatilidad:</b> Capacidad para desempeñarse en diversas áreas como electrónica, programación, diseño y soporte técnico.</p></li>
+            <li><p>📋 <b>Organización:</b> Planeación y gestión efectiva de tareas, cronogramas y recursos para cumplir objetivos.</p></li>
+            <li><p>🎯 <b>Compromiso:</b> Dedicación y responsabilidad con los proyectos asignados, buscando siempre resultados de calidad.</p></li>
+            <li><p>📈 <b>Enfoque en la Mejora Continua:</b> Evaluación y ajuste de procesos para optimizar desempeño y resultados.</p></li>
+        </ul>
+        <br>
+
+        <h2>Galería de Trabajos Realizados "Programación"</h2>
+        <div class="gallery">
+            <img src="img habilidades/cintilla programada.jpg" alt="Trabajo 3" onclick="openModal('img habilidades/cintilla programada.jpg')">
+            <img src="img habilidades/Reservas Codigo.jpg" alt="Trabajo 9" onclick="openModal('img habilidades/Reservas Codigo.jpg')">
+            <img src="img habilidades/Calendario Github.jpg" alt="Trabajo 10" onclick="openModal('img habilidades/Calendario Github.jpg')">
+            <img src="img habilidades/programando la cintilla.jpg" alt="Trabajo 11" onclick="openModal('img habilidades/programando la cintilla.jpg')">
+            <img src="img habilidades/raspberry&arduino.jpg" alt="Trabajo 12" onclick="openModal('img habilidades/raspberry&arduino.jpg')">
+            <img src="img habilidades/sitio del calendario captura.jpg" alt="Trabajo 15" onclick="openModal('img habilidades/sitio del calendario captura.jpg')">
+            <img src="img/Codigo cintilla.png" alt="Trabajo 16" onclick="openModal('img/Codigo cintilla.png')">
+            <img src="img habilidades/Cordenadas de sitios fisicos.png" alt="Trabajo 17" onclick="openModal('img habilidades/Cordenadas de sitios fisicos.png')">
+            <img src="img habilidades/PDFS a WORD Masivos.png" alt="Trabajo 18" onclick="openModal('img habilidades/PDFS a WORD Masivos.png')">
+            <img src="img/Proncipal reservas.jpg" alt="Trabajo 19" onclick="openModal('img/Proncipal reservas.jpg')">
+            <img src="img/Reservas.jpg" alt="Trabajo 19" onclick="openModal('img/Reservas.jpg')">
+            <br>
+        </div>
+
+        <h2>Ejemplos</h2>
+        <p><a href="https://reservaxxxx.netlify.app/" target="_blank">Pagina de Reserva Sencilla</a></p>
+        <p><a href="https://calendarioxxxxx.netlify.app/" target="_blank">Calendario Interactivo personal</a></p>
+        
+
+        <h2>Galería de Trabajos Realizados "Técnicos & Electricos"</h2>
+        <div class="gallery">
+            <img src="img habilidades/aplicandopastatermica.jpg" alt="Trabajo 1" onclick="openModal('img habilidades/aplicandopastatermica.jpg')">
+            <img src="img habilidades/board1.jpg" alt="Trabajo 2" onclick="openModal('img habilidades/board1.jpg')">
+            <img src="img habilidades/electricidad.jpg" alt="Trabajo 4" onclick="openModal('img habilidades/electricidad.jpg')">
+            <img src="img habilidades/electricidad2.jpg" alt="Trabajo 5" onclick="openModal('img habilidades/electricidad2.jpg')">
+            <img src="img habilidades/electricidadydatos3.jpg" alt="Trabajo 6" onclick="openModal('img habilidades/electricidadydatos3.jpg')">
+            <img src="img habilidades/ensambledepc2.jpg" alt="Trabajo 7" onclick="openModal('img habilidades/ensambledepc2.jpg')">
+            <img src="img habilidades/ensamblepc.jpg" alt="Trabajo 8" onclick="openModal('img habilidades/ensamblepc.jpg')">
+            <img src="img habilidades/tarjetagrafica1.jpg" alt="Trabajo 13" onclick="openModal('img habilidades/tarjetagrafica1.jpg')">
+            <img src="img habilidades/tarjetagrafica2.jpg" alt="Trabajo 14" onclick="openModal('img habilidades/tarjetagrafica2.jpg')">
+  
+            <br>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01" onclick="zoomImage()">
+        </div>
+
+        <!--
+        <div class="video-container">
+            <h2>Video Electricidad</h2>
+            <video muted>
+                <source src="img habilidades/videoelectricidad3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>-->
+        </div>
+    </div>
+    <tr id="imgMENU"><div align="center"><th><a href="./index.html"><img src="./img/INICIO.jpg" width="100" height="100"></a></th>
+    <script>
+        // Agregar interactividad con JavaScript
+
+        // 1. Hacer clic en el título mostrará una alerta.
+        document.querySelector('h1').addEventListener('click', function() {
+          alert('¡Has hecho clic en el título!');
+        });
+
+        // 2. Cambiar el color de fondo al pasar el mouse sobre las secciones.
+
+        // Seleccionamos todas las secciones en la página.
+        const sections = document.querySelectorAll('section');
+        sections.forEach(function(section) {
+          // Al pasar el mouse por encima de una sección, cambia su fondo a gris claro.
+          section.addEventListener('mouseover', function() {
+            section.style.backgroundColor = 'lightgray';
+          });
+
+          // Al quitar el mouse de la sección, restaura el fondo a blanco.
+          section.addEventListener('mouseout', function() {
+            section.style.backgroundColor = 'white';
+          });
+        });
+
+        // 4. Agregar un botón de reinicio para restablecer los colores.
+        const resetButton = document.createElement('button');
+        resetButton.textContent = 'Restablecer Colores';
+        resetButton.addEventListener('click', function() {
+          // Restaurar los colores de fondo de las secciones.
+          sections.forEach(function(section) {
+            section.style.backgroundColor = 'white';
+          });
+
+          // Restaurar los colores de fondo y el estilo del texto de los logros.
+          logros.forEach(function(logro) {
+            logro.style.backgroundColor = '';
+            logro.style.fontWeight = 'normal';
+            logro.style.cursor = 'default'; // Restaurar el cursor al valor predeterminado
+          });
+        });
+
+        // Agregar el botón de reinicio al final de la página.
+        document.body.appendChild(resetButton);
+
+        // Funcionalidad del modal
+        function openModal(imgSrc) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            modalImg.classList.remove("zoomed");
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        function zoomImage() {
+            var modalImg = document.getElementById("img01");
+            modalImg.classList.toggle("zoomed");
+        }
+
+        // Cerrar el modal si se hace clic fuera de la imagen
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
