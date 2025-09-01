@@ -1,161 +1,555 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de vida</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
-        }
-        .navbar {
-            background: #004085 !important;
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-        .nav-link:hover {
-            text-decoration: underline;
-        }
-        .carousel-item img {
-            height: 450px;
-            object-fit: cover;
-        }
-        .carousel-container {
-            margin: 20px 0;
-            border-top: 1px solid #000000; /* Línea superior */
-            border-bottom: 1px solid #000000; /* Línea inferior */
-            
-        }
-        .profile-container {
-            text-align: center;
-            padding: 30px 0;
-        }
-        .profile-image {
-            width: 230px;
-            height: 280px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .content-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #004085;
-            color: white;
-            padding: 20px 0;
-        }
-        .social-icons a {
-            color: white;
-            font-size: 20px;
-            margin: 0 10px;
-            transition: transform 0.3s;
-        }
-        .social-icons a:hover {
-            transform: scale(1.2);
-        }
-    </style>
+  <!-- ====== META / SEO ====== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kevyn Villegas — Hoja de Vida / Portafolio</title>
+  <meta name="description" content="Portafolio profesional de Kevyn Villegas: técnico electricista y desarrollador web, proyectos, experiencia, contacto." />
+  <meta name="theme-color" content="#004085" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kevyn Villegas — Portafolio" />
+  <meta property="og:description" content="Proyectos, experiencia, habilidades y contacto." />
+  <meta property="og:type" content="website" />
+  <!-- Favicon (TODO: agrega tu favicon) -->
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Chart.js para gráfico de habilidades -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="css/general.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Kevyn Villegas</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Kevyn Villegas</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="themeToggle" class="btn btn-sm btn-outline-light">
+              <i class="bi bi-moon-stars me-1"></i><span>Modo oscuro</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./Experiencias.html">Habilidades</a></li><!--XP y Habilidades-->
-                    <li class="nav-item"><a class="nav-link" href="./Actividades y Logros Servitronic.html">Experiencia Laboral Servitronic</a></li><!--Servitronic-->
-                    <li class="nav-item"><a class="nav-link" href="./Actividades y Logros.html">Experiencia Laboral La Salle</a></li> <!--La Salle-->
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div>
-        <p></p>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="carousel-container">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./img/Codigo Calendario.jpg" class="d-block w-100" alt="Imagen 1">
-                </div>
-                
-                <div class="carousel-item">
-                    <img src="./img/Codigo cintilla.png" class="d-block w-100" alt="Imagen 3">
-                </div>
+  <!-- ====== HERO ====== -->
+  <header class="hero">
+    <div class="container">
+      <span class="badge rounded-pill text-light px-3 py-2">Disponible para nuevos retos</span>
+      <h1 class="mt-3">Técnico Electricista & Desarrollador Web</h1>
+      <p class="lead">Integro infraestructura, software y datos para crear soluciones robustas y fáciles de usar.</p>
+      <div class="mt-3">
+        <a href="#contacto" class="btn btn-warning btn-lg me-2"><i class="bi bi-send"></i> Contáctame</a>
+        <a href="./reconocimientos/Kevin HojadeVida.pdf" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener"><i class="bi bi-download"></i> Descargar CV</a> <!-- TODO: tu CV -->
+      </div>
+    </div>
+  </header>
 
-                <div class="carousel-item">
-                    <img src="./img/programación de matríx.jpg" class="d-block w-100" alt="Imagen 3">
-                </div>
+  <!-- ====== PERFIL ====== -->
+  <!-- PERFIL: Mejor alineación y orden -->
+<section id="perfil">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-4 text-center d-flex flex-column align-items-center justify-content-center">
+        <img src="img/Imagen_Hoja_de_vida.jpeg" alt="Kevyn Villegas" class="avatar mb-3" style="transform: scale(0.88); transition: transform .3s;">
+        <div class="fw-semibold">Bogotá, Colombia</div>
+        <div class="muted">villegaskevin45@gmail.com</div>
+      </div>
+      <div class="col-lg-8">
+        <h2>Perfil</h2>
+        <p class="section-intro">
+          Técnico electricista y desarrollador web con experiencia en la integración de infraestructura tecnológica, automatización de procesos y desarrollo de soluciones digitales para entornos académicos, residenciales y empresariales.<br>
+          He liderado proyectos de cableado eléctrico y de datos, instalación de CCTV, mantenimiento de equipos, y coordinación de cuadrillas técnicas. Además, he desarrollado aplicaciones web, sistemas de reservas, calendarios institucionales y paneles LED con datos en tiempo real, optimizando la gestión y comunicación en organizaciones.<br>
+          Mi enfoque combina buenas prácticas, trabajo en equipo y la capacidad de adaptar tecnología a las necesidades de cada cliente, logrando resultados medibles y mejoras operativas sostenibles.
+        </p>
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+          <span class="chip"><i class="bi bi-check2-circle me-1"></i>Trabajo en equipo</span>
+          <span class="chip"><i class="bi bi-lightning-charge me-1"></i>Solución de problemas</span>
+          <span class="chip"><i class="bi bi-shield-lock me-1"></i>Buenas prácticas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="carousel-item">
-                    <img src="./img/panel led.jpg" class="d-block w-100" alt="Imagen 3">
-                </div>
+  <!-- ====== EXPERIENCIA ====== -->
+  <section id="experiencia" class="bg-transparent">
+    <div class="container">
+      <h2 class="text-center">Experiencia</h2>
+      <p class="section-intro text-center">Un resumen de roles clave y logros medibles.</p>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card-custom p-4 h-100 w-100 d-flex flex-column justify-content-between">
+            <i class="bi bi-briefcase icon-xxl"></i>
+            <h4 class="mt-3 mb-1">Servitronic</h4>
+            <div class="muted">Técnico electricista · 2021 – 2023</div>
+            <ul class="mt-3 mb-0">
+              <li>Instalación de cableado eléctrico y de datos para 20+ espacios críticos.</li>
+              <li>Implementación de CCTV y control de acceso, reduciendo incidentes 30%.</li>
+              <li>Coordinación de cuadrillas y logística para asambleas residenciales.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card-custom p-4 h-100 w-100 d-flex flex-column justify-content-between">
+            <i class="bi bi-building-check icon-xxl"></i>
+            <h4 class="mt-3 mb-1">Universidad La Salle</h4>
+            <div class="muted">Desarrollador web · 2023 – 2025</div>
+            <ul class="mt-3 mb-0">
+              <li>Desarrollo de apps y sitios para gestión académica (reservas, calendarios).</li>
+              <li>Integración con bases de datos y automatizaciones (Power Automate).</li>
+              <li>Paneles LED con datos en tiempo real (Arduino / DMD / Raspberry Pi).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-                <div class="carousel-item">
-                    <img src="./img/Calendario propio.jpg" class="d-block w-100" alt="Imagen 2">
+      <div class="row mt-4">
+        <div class="col-lg-7 mx-auto">
+          <div class="card-custom p-4">
+            <h5 class="mb-3"><i class="bi bi-clock-history me-2"></i>Línea de tiempo</h5>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-item-content">
+                  <h6 class="mb-1">Implementación de plataforma de reservas</h6>
+                  <div class="muted">2024 · Redujo en 60% el tiempo de asignación de espacios</div>
                 </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-item-content">
+                  <h6 class="mb-1">Sistema de calendario institucional</h6>
+                  <div class="muted">2024 · 100% responsive y auto-actualizable</div>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-item-content">
+                  <h6 class="mb-1">Pantallas LED informativas</h6>
+                  <div class="muted">2023 · Integración hardware + software en tiempo real</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="card-custom p-4 h-100 w-100 d-flex flex-column justify-content-between" style="min-height: 100%;">
+            <h5 class="mb-3"><i class="bi bi-award me-2"></i>Certificaciones/Reconocimientos</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="./reconocimientos/CERTIFICACION LABORAL SERVITRONIC KEVIN ALEJANDRO VILLEGAS VELEZ (1).pdf" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 text-start"><i class="bi bi-file-earmark-pdf me-2"></i>Certificación Laboral Servitronic</a>
+              </li>
 
-                <div class="carousel-item">
-                    <img src="./img/Proncipal reservas.jpg" class="d-block w-100" alt="Imagen 3">
-                </div>
+              <li class="mb-2">
+                <a href="./reconocimientos/Certificado La Salle.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 text-start"><i class="bi bi-file-earmark-pdf me-2"></i>Certificación Laboral Universidad de La Salle</a>
+              </li>
 
-                <div class="carousel-item">
-                    <img src="./img/Reservas.jpg" class="d-block w-100" alt="Imagen 3">
-                </div>
+              <li class="mb-2">
+                <a href="./reconocimientos/KEVIN ALEJANDRO VILLEGAS VELEZ (A Técnico).pdf" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 text-start"><i class="bi bi-file-earmark-pdf me-2"></i>Certificado Técnico</a>
+              </li>
+              <li class="mb-2">
+                <a href="./reconocimientos/Kevin Alejandro Villegas Velez.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 text-start"><i class="bi bi-file-earmark-pdf me-2"></i>Certificado Finanzas Comportamentales</a>
+              </li>
+              <li class="mb-2">
+                <a href="./reconocimientos/Servicio al cliente.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 text-start"><i class="bi bi-file-earmark-pdf me-2"></i>Servicio al Cliente</a>
+              </li>
+              <li class="mb-2">
+                <a href="./reconocimientos/Villegas Velez-Kevin Alejandro(RENTA FIJA).pdf" target="_blank" rel="noopener" class="btn btn-outline-primary w-100 text-start"><i class="bi bi-file-earmark-pdf me-2"></i>Certificado Renta Fija</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== HABILIDADES ====== -->
+  <!-- HABILIDADES: barras con iconos y tooltips -->
+<section id="habilidades" class="bg-transparent">
+  <div class="container">
+    <h2 class="text-center">Habilidades</h2>
+    <p class="section-intro text-center">Tecnologías y competencias técnicas/funcionales.</p>
+    <div class="row g-4 skills-row">
+      <!-- Barras -->
+       
+      <div class="col-lg-6">
+        <div class="card-custom p-4 h-100 d-flex flex-column justify-content-center animate-fadein">
+          <div class="mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-filetype-html skill-icon"></i>HTML/CSS/JS</span><span class="muted">90%</span>
+            </div>
             
+            <div class="skill-bar" data-tooltip="Dominio avanzado en desarrollo web">
+              <div class="skill-fill" data-fill="90%"></div>
+              <div class="skill-tooltip">Dominio avanzado en desarrollo web</div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-bootstrap skill-icon"></i>Bootstrap / UI</span><span class="muted">77%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Diseño moderno y responsivo">
+              <div class="skill-fill" data-fill="77%"></div>
+              <div class="skill-tooltip">Diseño moderno y responsivo</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-cpu skill-icon"></i>Python (automatización)</span><span class="muted">70%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Automatización de procesos y datos">
+              <div class="skill-fill" data-fill="70%"></div>
+              <div class="skill-tooltip">Automatización de procesos y datos</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-motherboard skill-icon"></i>Arduino / IoT</span><span class="muted">80%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Integración de hardware y sensores">
+              <div class="skill-fill" data-fill="80%"></div>
+              <div class="skill-tooltip">Integración de hardware y sensores</div>
+            </div>
+          </div>
+          <div class="mb-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-lightning skill-icon"></i>Electricidad / Cableado estructurado</span><span class="muted">88%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Instalaciones seguras y eficientes">
+              <div class="skill-fill" data-fill="88%"></div>
+              <div class="skill-tooltip">Instalaciones seguras y eficientes</div>
+            </div>
+          </div>
+
+          <div class="mb-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-pc skill-icon"></i>Soporte Técnico y Mantenimiento de Computadores</span><span class="muted">95%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Soporte Técnico y Mantenimiento de Computadores">
+              <div class="skill-fill" data-fill="95%"></div>
+              <div class="skill-tooltip">Diagnóstico, reparación, optimización y ensamblaje profesional de equipos de cómputo.</div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-bar-chart skill-icon"></i>MetaBase/PowerBi</span><span class="muted">75%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Visualización y análisis de datos">
+              <div class="skill-fill" data-fill="75%"></div>
+              <div class="skill-tooltip">Visualización y análisis de datos</div>
+            </div>
+          </div>
+          <div class="mb-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-terminal skill-icon"></i>Visual Studio / Cursor / Arduino</span><span class="muted">85%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Visual Studio / Cursor / Arduino">
+              <div class="skill-fill" data-fill="85%"></div>
+              <div class="skill-tooltip">Procesadores y entornos de desarrollo de código para proyectos técnicos y electrónicos.</div>
+            </div>
+          </div>
+          <div class="mb-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-cloud skill-icon"></i>Google Colab / App Script</span><span class="muted">70%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Google Colab / App Script">
+              <div class="skill-fill" data-fill="70%"></div>
+              <div class="skill-tooltip">Automatización y análisis de datos en entornos colaborativos y de productividad en la nube.</div>
+            </div>
+          </div>
+          <div class="mb-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-gear skill-icon"></i>Power Pages / Power Automate</span><span class="muted">80%</span>
+            </div>
+            <div class="skill-bar" data-tooltip="Power Pages / Power Automate">
+              <div class="skill-fill" data-fill="80%"></div>
+              <div class="skill-tooltip">Automatización de procesos y desarrollo de aplicaciones empresariales con herramientas low-code.</div>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- Chart -->
+      <div class="col-lg-6">
+        <div class="card-custom p-4 h-100 d-flex flex-column animate-fadein">
+          <h6 class="mb-3">Mapa de habilidades</h6>
+          <canvas id="skillsChart" height="220" aria-label="Gráfico de habilidades" role="img"></canvas>
+          <div class="mt-3 small text-muted">Representación visual (radar) de fortalezas.</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  <!-- ====== PORTAFOLIO ====== -->
+  <section id="portafolio">
+    <div class="container">
+      <h2 class="text-center">Portafolio</h2>
+      <p class="section-intro text-center">Proyectos seleccionados. Usa los filtros para explorar.</p>
+
+      <div class="text-center mb-4">
+        <div class="btn-group">
+          <button class="btn btn-outline-primary filter-btn active" data-filter="all">Todo</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="web">Web</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="iot">IoT / LED</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="infra">Infraestructura</button>
+        </div>
+      </div>
+
+      <div class="row g-4 portfolio">
+        <!-- Tarjetas (TODO: reemplaza imágenes y enlaces) -->
+        <div class="col-md-4 item" data-cat="web">
+          <div class="card card-custom">
+            <img src="./img/Reservas.jpg" class="card-img-top" alt="Plataforma de reservas">
+            <div class="card-body">
+              <h5 class="card-title">Plataforma de Reservas Sencilla</h5>
+              <p class="card-text muted">Gestión de espacios y calendarios con flujos automatizados.</p>
+              <a href="https://reservaxxxx.netlify.app/" class="btn btn-sm btn-primary" target="_blank">Ver demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 item" data-cat="web">
+          <div class="card card-custom">
+            <img src="./img/Calendario propio.jpg" class="card-img-top" alt="Calendario digital">
+            <div class="card-body">
+              <h5 class="card-title">Calendario Digital</h5>
+              <p class="card-text muted">Agenda de eventos institucional con diseño responsive.</p>
+              <a href="https://calendarioxxxxx.netlify.app/" class="btn btn-sm btn-primary" target="_blank" rel="noopener">Ver demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 item" data-cat="iot">
+          <div class="card card-custom">
+            <img src="./img/panel led.jpg" class="card-img-top" alt="Panel LED">
+            <div class="card-body">
+              <h5 class="card-title">Pantallas LED informativas</h5>
+              <p class="card-text muted">Mensajería en tiempo real (Arduino + DMD + Raspberry).</p>
+              <button class="btn btn-sm btn-primary" onclick="mostrarFotosLed()">Ver fotos</button>
+            </div>
+          </div>
+    <!-- Modal para fotos de Pantallas LED informativas -->
+    <div id="fotosLed" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,.7); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#fff; padding:24px; border-radius:16px; max-width:900px; width:90vw;">
+        <h4>Fotos: Pantallas LED informativas</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+          <img src="img habilidades/programando la cintilla.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Panel LED 1" onclick="abrirImagenModal(this)">
+          <img src="img/programación de matríx.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Matriz LED" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/cintilla led.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Reservas LED" onclick="abrirImagenModal(this)">
+        </div>
+        <button onclick="cerrarFotosLed()" class="btn btn-danger mt-3">Cerrar</button>
+      </div>
+    </div>
+        </div>
+        <div class="col-md-4 item" data-cat="infra">
+          <div class="card card-custom">
+            <img src="./img habilidades/electricidad2.jpg"  class="card-img-top" alt="Infraestructura">
+            <div class="card-body">
+              <h5 class="card-title">Cableado & CCTV</h5>
+              <p class="card-text muted">Instalación y pruebas bajo estándares de seguridad.</p>
+              <button class="btn btn-sm btn-primary" onclick="mostrarFotosCCTV()">Ver fotos</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 item" data-cat="iot">
+          <div class="card card-custom">
+            <img src="./img habilidades/aplicandopastatermica.jpg" class="card-img-top" alt="Matriz LED">
+            <div class="card-body">
+              <h5 class="card-title">Reparación Técnica de Computadoras</h5>
+              <p class="card-text muted">Galería de reparaciones y ensamblajes técnicos.</p>
+              <button class="btn btn-sm btn-primary" onclick="mostrarFotosComputadoras()">Ver fotos</button>
+            </div>
+          </div>
+    <!-- Modal para fotos de Reparación Técnica de Computadoras -->
+    <div id="fotosComputadoras" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,.7); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#fff; padding:24px; border-radius:16px; max-width:900px; width:90vw;">
+        <h4>Fotos: Reparación Técnica de Computadoras</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+          <img src="img habilidades/ensamblepc.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Ensamble PC 1" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/ensambledepc2.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Ensamble PC 2" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/minipc1.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Mini PC" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/procesadora8.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Procesadora" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/tarjetagrafica1.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Tarjeta Gráfica 1" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/tarjetagrafica2.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Tarjeta Gráfica 2" onclick="abrirImagenModal(this)">
+        </div>
+        <button onclick="cerrarFotosComputadoras()" class="btn btn-danger mt-3">Cerrar</button>
+      </div>
+    </div>
+        </div>
+        <div class="col-md-4 item" data-cat="web">
+          <div class="card card-custom" style="align-items: stretch;">
+            <img src="./img/Codigo cintilla.png" class="card-img-top" alt="Cintilla">
+            <div class="card-body text-start" style="padding: 1.25rem 1rem 1rem 1rem;">
+              <h5 class="card-title mb-1">Desarrollo & Programación</h5>
+              <p class="card-text muted mb-2">Ticker con KPIs en tiempo real.</p>
+              <button class="btn btn-sm btn-primary" style="margin-left:0;" onclick="mostrarFotosCintilla()">Ver fotos</button>
+            </div>
+          </div>
+    <!-- Modal para fotos de Desarrollo & Programación -->
+    <div id="fotosCintilla" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,.7); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#fff; padding:24px; border-radius:16px; max-width:900px; width:90vw;">
+        <h4>Fotos: Desarrollo & Programación</h4>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+          <img src="img/Codigo cintilla.png" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Cintilla 1" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/Reservas Codigo.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Cintilla Programada" onclick="abrirImagenModal(this)">
+          <img src="img habilidades/Calendario Github.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" alt="Calendario Github" onclick="abrirImagenModal(this)">
+        </div>
+        <button onclick="cerrarFotosCintilla()" class="btn btn-danger mt-3">Cerrar</button>
+      </div>
+    </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="container profile-container">
-        <h2>Imagen de Perfil</h2>
-        <img src="img/Imagen_Hoja_de_vida.jpeg" alt="Imagen de perfil" class="profile-image">
+    <div id="fotosCCTV" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,.7); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:24px; border-radius:16px; max-width:900px; width:90vw;">
+    <h4>Fotos: Cableado & CCTV</h4>
+    <div style="display:flex; flex-wrap:wrap; gap:12px;">
+  <img src="img habilidades/electricidad.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" onclick="abrirImagenModal(this)">
+  <img src="img habilidades/electricidad2.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" onclick="abrirImagenModal(this)">
+  <img src="img habilidades/electricidadydatos3.jpg" style="width:30%; border-radius:8px; aspect-ratio: 4/3; object-fit: cover; cursor:pointer;" onclick="abrirImagenModal(this)">
+      <!-- Agrega más imágenes si lo deseas -->
     </div>
+    <button onclick="cerrarFotosCCTV()" class="btn btn-danger mt-3">Cerrar</button>
+  </div>
+</div>
+  </section>
 
-    <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-8 content-box">
-                <h2 class="text-center">Resumen de Actividades y Experiencias</h2>
-                <ul>
-                    <li>He formado parte del equipo del Laboratorio Fintrade, asumiendo roles estratégicos y operativos. He contribuido activamente en el desarrollo de soluciones técnicas, la gestión de proyectos y la implementación de iniciativas en múltiples áreas, fortaleciendo la articulación entre tecnología, análisis financiero y procesos académicos.</li>
-                    <br>
-                    <li>Cuento con experiencia en trabajos de remodelación e infraestructura, desempeñándome como técnico electricista en la estructuración de cableado eléctrico y de datos, instalación de cámaras de seguridad, coordinación de personal y logística de eventos como asambleas residenciales. He trabajado también en la reparación y mantenimiento de equipos de cómputo, y actualmente desarrollo 
-                        aplicativos y páginas web orientadas a optimizar procesos y facilitar la gestión de información financiera y administrativa.</li>
-                </ul>
+  <!-- ====== TESTIMONIOS ====== -->
+  <section>
+    <div class="container">
+      <h2 class="text-center">Referencias</h2>
+      <p class="section-intro text-center">Personas con las que he trabajado.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial">
+            <div class="d-flex align-items-center mb-2">
+              <img src="./img/Rodrigo Velez.jpg" class="rounded-circle me-3" alt="Avatar" style="width:60px; height:60px; object-fit:cover;">
+              <div>
+                <strong>Rodrigo Veléz</strong><br>
+                <span class="muted small">Jefe Inmediato</span>
+              </div>
             </div>
+            <p class="mb-0">“Kevyn propone soluciones claras, ejecuta rápido y cuida los detalles. Muy buen trabajo”</p>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://i.pravatar.cc/60?img=8" class="rounded-circle me-3" alt="Avatar">
+              <div>
+                <strong>Carlos Ruiz</strong><br>
+                <span class="muted small">Infraestructura</span>
+              </div>
+            </div>
+            <p class="mb-0">“Excelente integración de hardware y software. Los tableros LED quedaron impecables.”</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial">
+            <div class="d-flex align-items-center mb-2">
+              <img src="./img/Efra.jpg" class="rounded-circle me-3" alt="Avatar" style="width:60px; height:60px; object-fit:cover;">
+              <div>
+                <strong>Efrain Tovar</strong><br>
+                <span class="muted small">Coordinación Académica</span>
+              </div>
+            </div>
+            <p class="mb-0">“Las apps de reservas y calendario nos ahorraron horas semanales. Excelente trabajo.”</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <footer class="text-center mt-5">
-        <div class="container">
-            <div class="social-icons mb-3">
-                <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
-                <a href="https://google.com"><i class="bi bi-google"></i></a>
-                <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
-                <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com"><i class="bi bi-github"></i></a>
+  <!-- ====== CONTACTO ====== -->
+  <!-- CONTACTO: Mejor visual y corrección de formulario -->
+<section id="contacto" class="bg-transparent">
+  <div class="container">
+    <h2 class="text-center">Contacto</h2>
+    <p class="section-intro text-center">¿Tienes un proyecto? Conversemos.</p>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card-custom p-4">
+          <form id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="Nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="Email" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Mensaje</label>
+                <textarea class="form-control" rows="4" name="Mensaje" required></textarea>
+              </div>
             </div>
-            <p>KEVIN &copy; Todos los derechos reservados 2025</p>
+            <div class="d-flex align-items-center mt-3">
+              <button class="btn btn-primary me-3" type="submit"><i class="bi bi-send"></i> Enviar</button>
+              <div id="formMsg" class="small muted"></div>
+            </div>
+          </form>
+          <div class="divider"></div>
+          <div class="d-flex gap-3 flex-wrap">
+            <a class="btn btn-outline-secondary" href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <a class="btn btn-outline-secondary" href="https://github.com" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+            <a class="btn btn-outline-secondary" href="mailto:kevynvillegas@example.com"><i class="bi bi-envelope"></i> Email directo</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ====== FOOTER ====== -->
+  <footer class="py-4">
+    <div class="container text-center">
+      <div class="social mb-2">
+        <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+        <a href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+        <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com"><i class="bi bi-github"></i></a>
+      </div>
+      <div class="small muted">© <span id="year"></span> Kevyn Villegas — Todos los derechos reservados</div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="toTop" aria-label="Ir arriba"><i class="bi bi-arrow-up"></i></button>
+  <script src="js/main.js"></script>
+  <!-- ====== JSON-LD / SCHEMA.ORG (Mejor SEO) ====== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Kevyn Villegas",
+    "jobTitle":"Técnico electricista y Desarrollador Web",
+    "url":"https://tusitio.com",
+    "image":"https://tusitio.com/img/Imagen_Hoja_de_vida.jpeg",
+    "sameAs":[
+      "https://linkedin.com/in/tuusuario",
+      "https://github.com/tuusuario"
+    ]
+  }
+  </script>
+
 </body>
 </html>
